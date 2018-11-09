@@ -1,0 +1,25 @@
+@media (min-width: 995px) {
+  .center-movie-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .movie-title-text {
+    font-size: 70px;
+    font-weight: 500;
+  }
+  .release-text {
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 767px) {
+  .no-width-sm {
+    padding: 0px;
+  }
+}
+
+.review-text {
+  text-align: center;
+}

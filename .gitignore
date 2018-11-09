@@ -19,3 +19,15 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+# extra
+/src/config
+/functions
+/%RESOURCE_DIR%
+/.firebase
+.firebaserc
+database.rules.json
+firebase.json
+firestore.indexes.json
+firestore.rules
