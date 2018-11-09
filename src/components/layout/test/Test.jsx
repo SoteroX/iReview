@@ -7,8 +7,8 @@ class Test extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      authorname: "ayyy",
-      title: "bro bro",
+      authorname: "",
+      title: "",
       createdAt: new Date(),
       category: "",
       uid: null
