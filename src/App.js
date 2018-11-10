@@ -8,7 +8,6 @@ import FooterPage from "./components/common/footer/Footer";
 import Home from "./components/layout/home/Home";
 import GamePage from "./components/layout/games/GamePage";
 import Login from "./components/layout/login/Login";
-import Signup from "./components/layout/signup/Signup";
 import Test from "./components/layout/test/Test";
 import LoginTest from "./components/layout/test/LoginTest";
 import TodoTest from "./components/layout/test/TodoTest";
@@ -30,11 +29,10 @@ class App extends Component {
             <Route exact path="/movies/:movieid" component={MovieItem} />
             <Route exact path="/games" component={GamePage} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/signup" component={Signup} />
-            <Route exact path="/test" component={Test} />
             <Route exact path="/profiles" component={Profiles} />
             <Route exact path="/profile" component={Profile} />
-            <Route exact path="/test/login" component={LoginTest} />
+            {/* <Route exact path="/test/login" component={LoginTest} />
+            <Route exact path="/test" component={Test} /> */}
             {/* <Route exact path="/test/todo" component={TodoTest} /> */}
           </Switch>
           <FooterPage />
