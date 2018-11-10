@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { compose } from "redux";
 import axios from "axios";
-import { Container } from "mdbreact";
+import { Container, Row, Col } from "mdbreact";
 import Rating from "react-rating";
 import AddButton from "../../../common/addButton/AddButton";
 import { firestoreConnect } from "react-redux-firebase";
@@ -106,13 +106,11 @@ class MovieItem extends Component {
           </div>
         </div>
         <Container>
-          <div className="row">
+          <div className="row" style={{ justifyContent: "center" }}>
             <div className="col-md-12">
               <h3 className="review-text">Reviews</h3>
             </div>
-            <div className="row">
-              {reviewData ? reviewItem : <div>No Reviews Yet </div>}
-            </div>
+            <Row>{reviewData ? reviewItem : <div>No Reviews Yet </div>}</Row>
           </div>
         </Container>
         {isLoggedIn ? (
