@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+//Custom components
 import MoviePage from "./components/layout/movie/MoviePage";
-import { connect } from "react-redux";
-import { createProject } from "./redux/actions/projectAction";
 import NavBar from "./components/common/nav/NavBar";
 import FooterPage from "./components/common/footer/Footer";
 import Home from "./components/layout/home/Home";
@@ -12,30 +12,13 @@ import Signup from "./components/layout/signup/Signup";
 import Test from "./components/layout/test/Test";
 import LoginTest from "./components/layout/test/LoginTest";
 import TodoTest from "./components/layout/test/TodoTest";
-import { fetchUser } from "./redux/actions/authAction";
 import Profiles from "./components/layout/profiles/Profiles";
 import Profile from "./components/layout/profile/Profile";
 import MovieItem from "./components/layout/movie/components/MovieItem";
+// styles
 import "./styles.scss";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: "rabbit",
-      id: 45,
-      rate: 10
-    };
-  }
-
-  componentWillMount() {
-    this.props.fetchUser();
-  }
-
-  handleClick = () => {
-    this.props.createProject(this.state);
-  };
-
   render() {
     return (
       <Router>
@@ -61,13 +44,4 @@ class App extends Component {
   }
 }
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     createProject: project => dispatch(createProject(project))
-//   };
-// };
-
-export default connect(
-  null,
-  { fetchUser }
-)(App);
+export default App;

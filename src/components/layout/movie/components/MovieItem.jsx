@@ -86,6 +86,7 @@ class MovieItem extends Component {
     return (
       <Container fluid style={{ color: "white" }}>
         <div className="row">
+          {/* Display the movie poster img */}
           <div className="col-md-4 col-sm-12 no-width-sm">
             <img
               src={"https://image.tmdb.org/t/p/w500" + poster_path}
@@ -95,6 +96,7 @@ class MovieItem extends Component {
           </div>
           <div className="col-md-8 center-movie-text ">
             <div>
+              {/* Display the movie title and release date */}
               <h1 className="movie-title-text">{title}</h1>
               <p className="release-text">Released: {release_date}</p>
             </div>
@@ -102,6 +104,7 @@ class MovieItem extends Component {
               emptySymbol="fa fa-star-o fa-2x"
               fullSymbol="fa fa-star fa-2x"
             />
+            {/* Display the movie description */}
             <p>{overview}</p>
           </div>
         </div>
@@ -110,6 +113,7 @@ class MovieItem extends Component {
             <div className="col-md-12">
               <h3 className="review-text">Reviews</h3>
             </div>
+            {/* Display reviews from user if their are any */}
             <Row>{reviewData ? reviewItem : <div>No Reviews Yet </div>}</Row>
           </div>
         </Container>
@@ -118,7 +122,7 @@ class MovieItem extends Component {
             <AddButton movieID={movieid} />
           </div>
         ) : (
-          <div>Login to add revi</div>
+          <div>Login to add review</div>
         )}
       </Container>
     );

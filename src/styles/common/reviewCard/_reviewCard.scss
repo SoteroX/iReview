@@ -12,3 +12,10 @@
   background-color: #212121;
   color: #2ca239;
 }
+
+@media (max-width: 575px) {
+  .card-width {
+    overflow-x: hidden;
+    padding: 0px;
+  }
+}

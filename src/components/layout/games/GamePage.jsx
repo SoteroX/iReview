@@ -31,7 +31,7 @@ class GamePage extends Component {
         </div>
       );
     } else {
-      return <div>Gamepage</div>;
+      return <div>Gamepage coming soon</div>;
     }
   }
 }

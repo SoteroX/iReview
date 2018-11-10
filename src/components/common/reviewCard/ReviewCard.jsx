@@ -15,15 +15,14 @@ export default class ReviewCard extends Component {
   render() {
     console.log("inside review carddata: ", this.props.data.rate);
     return (
-      <Col lg={4} sm={12} style={{ width: "390px", marginTop: "20px" }}>
+      <Col
+        style={{ marginTop: "20px", wordBreak: "break-word" }}
+        className="w-100 col-12 col-md-4"
+      >
         <Card
-        // style={{
-        //   width: "22rem",
-        //   marginTop: "1rem",
-        //   margin: "auto",
-        //   padding: "0px",
-        //   color: "white"
-        // }}
+          style={{
+            margin: "auto"
+          }}
         >
           <CardImage cascade tag="div">
             <div
