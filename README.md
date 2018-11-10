@@ -1,3 +1,11 @@
+TODO
+-Remove all unnecessary code
+-fix styles
+-move from localStorage to redux state
+-add following and followers
+-add search with suggestion
+
+UP AND RUNNING
 In order to get this app up and running locally first you must run
 "npm install"
 in the root folder
