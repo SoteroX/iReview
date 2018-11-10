@@ -3,8 +3,6 @@ import { loginWithGoogle } from "../../../helpers/auth";
 import { firebaseAuth } from "../../../config/firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import firebase from "firebase";
-import { setCurrentUser } from "../../../redux/actions/usersAction";
-import { connect } from "react-redux";
 
 const firebaseAuthKey = "firebaseAuthInProgress";
 const appTokenKey = "appToken";

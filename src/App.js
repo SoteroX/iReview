@@ -9,7 +9,6 @@ import Home from "./components/layout/home/Home";
 import GamePage from "./components/layout/games/GamePage";
 import Login from "./components/layout/login/Login";
 import Test from "./components/layout/test/Test";
-import LoginTest from "./components/layout/test/LoginTest";
 import TodoTest from "./components/layout/test/TodoTest";
 import Profiles from "./components/layout/profiles/Profiles";
 import Profile from "./components/layout/profile/Profile";
@@ -31,7 +30,6 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/profiles" component={Profiles} />
             <Route exact path="/profile" component={Profile} />
-            {/* <Route exact path="/test/login" component={LoginTest} />
             <Route exact path="/test" component={Test} /> */}
             {/* <Route exact path="/test/todo" component={TodoTest} /> */}
           </Switch>
