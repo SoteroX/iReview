@@ -11,7 +11,7 @@ const uiConfig = {
   // Popup signin flow rather than redirect flow.
   signInFlow: "popup",
   // Redirect to /signedIn after sign in is successful. Alternatively you can provide a callbacks.signInSuccess function.
-  signInSuccessUrl: "/movies",
+  signInSuccessUrl: "/",
   // We will display Google and Facebook as auth providers.
   signInOptions: [firebase.auth.GoogleAuthProvider.PROVIDER_ID]
 };
@@ -54,7 +54,7 @@ export default class Login extends Component {
 
   render() {
     if (localStorage.getItem(firebaseAuthKey === "1")) {
-      return <div>splashscreen boi</div>;
+      return <div>splashscreen</div>;
     }
     return (
       <div style={{ height: "79vh" }}>

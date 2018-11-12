@@ -17,6 +17,8 @@
 @media (max-width: 767px) {
   .no-width-sm {
     padding: 0px;
+    display: flex;
+    justify-content: center;
   }
 }
 

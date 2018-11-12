@@ -1,22 +1,27 @@
 import React, { Component } from "react";
-import { logout } from "../../../helpers/auth";
-
+import NavBar from "../../common/nav/NavBar";
+import { Button } from "mdbreact";
+import Welcome from "./component/Welcome";
+import Profile from "./component/Profile";
 const appTokenKey = "appToken";
 
 export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
-      phote: ""
+      loggedIn: false
     };
   }
 
+  componentWillMount() {
+    if (localStorage.getItem("appToken")) {
+      this.setState({ loggedIn: true });
+    }
+  }
+
   render() {
-    return (
-      <div>
-        <div>Homepage coming soon</div>
-      </div>
-    );
+    const { loggedIn } = this.state;
+    const display = loggedIn === true ? <Profile /> : <Welcome />;
+    return <React.Fragment>{display}</React.Fragment>;
   }
 }

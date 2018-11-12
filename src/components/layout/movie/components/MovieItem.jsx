@@ -7,6 +7,7 @@ import Rating from "react-rating";
 import AddButton from "../../../common/addButton/AddButton";
 import { firestoreConnect } from "react-redux-firebase";
 import ReviewCard from "../../../common/reviewCard/ReviewCard";
+import NavBar from "../../../common/nav/NavBar";
 
 const appTokenKey = "appToken";
 
@@ -84,47 +85,50 @@ class MovieItem extends Component {
       return <ReviewCard className="mr-2" data={item} key={i} />;
     });
     return (
-      <Container fluid style={{ color: "white" }}>
-        <div className="row">
-          {/* Display the movie poster img */}
-          <div className="col-md-4 col-sm-12 no-width-sm">
-            <img
-              src={"https://image.tmdb.org/t/p/w500" + poster_path}
-              className="img-fluid"
-              alt="Movie Poster"
-            />
+      <div>
+        <NavBar />
+        <Container fluid style={{ color: "white" }}>
+          <div className="row">
+            {/* Display the movie poster img */}
+            <div className="col-md-4 col-sm-12 no-width-sm">
+              <img
+                src={"https://image.tmdb.org/t/p/w500" + poster_path}
+                className="img-fluid"
+                alt="Movie Poster"
+              />
+            </div>
+            <div className="col-md-8 center-movie-text ">
+              <div>
+                {/* Display the movie title and release date */}
+                <h1 className="movie-title-text">{title}</h1>
+                <p className="release-text">Released: {release_date}</p>
+              </div>
+              <Rating
+                emptySymbol="fa fa-star-o fa-2x"
+                fullSymbol="fa fa-star fa-2x"
+              />
+              {/* Display the movie description */}
+              <p>{overview}</p>
+            </div>
           </div>
-          <div className="col-md-8 center-movie-text ">
+          <Container>
+            <div className="row" style={{ justifyContent: "center" }}>
+              <div className="col-md-12">
+                <h3 className="review-text">Reviews</h3>
+              </div>
+              {/* Display reviews from user if their are any */}
+              <Row>{reviewData ? reviewItem : <div>No Reviews Yet </div>}</Row>
+            </div>
+          </Container>
+          {isLoggedIn ? (
             <div>
-              {/* Display the movie title and release date */}
-              <h1 className="movie-title-text">{title}</h1>
-              <p className="release-text">Released: {release_date}</p>
+              <AddButton movieID={movieid} />
             </div>
-            <Rating
-              emptySymbol="fa fa-star-o fa-2x"
-              fullSymbol="fa fa-star fa-2x"
-            />
-            {/* Display the movie description */}
-            <p>{overview}</p>
-          </div>
-        </div>
-        <Container>
-          <div className="row" style={{ justifyContent: "center" }}>
-            <div className="col-md-12">
-              <h3 className="review-text">Reviews</h3>
-            </div>
-            {/* Display reviews from user if their are any */}
-            <Row>{reviewData ? reviewItem : <div>No Reviews Yet </div>}</Row>
-          </div>
+          ) : (
+            <div>Login to add review</div>
+          )}
         </Container>
-        {isLoggedIn ? (
-          <div>
-            <AddButton movieID={movieid} />
-          </div>
-        ) : (
-          <div>Login to add review</div>
-        )}
-      </Container>
+      </div>
     );
   }
 }

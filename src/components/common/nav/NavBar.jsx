@@ -61,8 +61,8 @@ class NavBar extends React.Component {
         sticky="top"
         dark
         expand="md"
-        // transparent
-        // scrolling
+        transparent
+        scrolling
       >
         <NavbarBrand href="/">
           <strong>iReviews</strong>
