@@ -37,7 +37,7 @@ class TopRated extends Component {
     });
     return (
       <div>
-        <h1 className="title-heading">TopRated</h1>
+        <h1 className="title-heading">Top Rated</h1>
         <ScrollField>{top}</ScrollField>
       </div>
     );

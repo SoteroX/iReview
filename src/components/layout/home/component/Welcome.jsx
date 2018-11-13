@@ -3,9 +3,12 @@ import { Button } from "mdbreact";
 import NavBar from "../../../common/nav/NavBar";
 
 export default class Welcome extends Component {
+  handleOnClick = () => {
+    this.props.history.push("/login");
+  };
   render() {
     return (
-      <section className="welcome-section">
+      <section style={{ overflowY: "hidden" }} className="welcome-section">
         <NavBar />
         <div className="welcome">
           <h1>Welcome to iReviews</h1>
@@ -15,7 +18,7 @@ export default class Welcome extends Component {
           </p>
           <div>
             <h4>Login now it's free.</h4>
-            <Button>Login in</Button>
+            <Button onClick={this.handleOnClick}>Login</Button>
           </div>
         </div>
       </section>

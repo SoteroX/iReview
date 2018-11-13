@@ -86,7 +86,8 @@ class AddButton extends Component {
       <div>
         <Button
           style={{
-            backgroundImage: "linear-gradient(-90deg, #022111, #07cb48)",
+            background:
+              "linear-gradient(90deg, rgb(54, 185, 110) 4%, rgb(0, 212, 255) 50%)",
             position: "fixed",
             bottom: "20px",
             right: "20px"
@@ -109,8 +110,8 @@ class AddButton extends Component {
                 <div
                   className="modal-header  white-text"
                   style={{
-                    backgroundImage:
-                      "linear-gradient(-90deg, rgb(2, 33, 17), rgb(7, 203, 72))"
+                    background:
+                      "linear-gradient(90deg, rgb(54, 185, 110) 4%, rgb(0, 212, 255) 50%)"
                   }}
                 >
                   <h4 className="title">
@@ -121,7 +122,7 @@ class AddButton extends Component {
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <ModalBody className="white-text">
+                <ModalBody style={{ color: "#1bead3" }}>
                   <Rating
                     stop={5}
                     initialRating={this.state.rate}
@@ -129,7 +130,6 @@ class AddButton extends Component {
                     fullSymbol="fa fa-star fa-2x"
                     onChange={this.handleRateChange}
                   />
-
                   <Input
                     size="sm"
                     label="Review Title"
@@ -141,6 +141,7 @@ class AddButton extends Component {
                     success="right"
                     onChange={this.handleTitleChange}
                     value={this.state.title}
+                    className="input-style white-text"
                   />
                   <Input
                     size="sm"
@@ -150,16 +151,17 @@ class AddButton extends Component {
                     icon="pencil"
                     onChange={this.handleOnChange}
                     value={this.state.textValue}
+                    className="input-style white-text"
                   />
                 </ModalBody>
                 <ModalFooter>
-                  <Button outline color="success" onClick={this.toggle}>
+                  <Button outline onClick={this.toggle}>
                     X
                   </Button>
                   <Button
                     style={{
-                      backgroundImage:
-                        "linear-gradient(-90deg, rgb(2, 33, 17), rgb(7, 203, 72))"
+                      background:
+                        "linear-gradient(90deg, rgb(54, 185, 110) 4%, rgb(0, 212, 255) 50%)"
                     }}
                     onClick={this.handleOnSubmit}
                     href={"/movies/" + this.props.movieID}

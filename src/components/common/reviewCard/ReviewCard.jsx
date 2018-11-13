@@ -28,7 +28,8 @@ export default class ReviewCard extends Component {
             <div
               className="view gradient-card-header"
               style={{
-                backgroundImage: "linear-gradient(-90deg, #022111, #07cb48)"
+                background:
+                  "linear-gradient(90deg, rgb(54, 185, 110) 4%, rgb(0, 212, 255) 50%)"
               }}
             >
               <img
@@ -48,7 +49,8 @@ export default class ReviewCard extends Component {
           </CardImage>
           <CardBody
             style={{
-              backgroundImage: "linear-gradient(-90deg, #022111, #07cb48)"
+              background:
+                "linear-gradient(90deg, rgb(54, 185, 110) 4%, rgb(0, 212, 255) 50%)"
             }}
           >
             <CardTitle style={{ textAlign: "center" }}>

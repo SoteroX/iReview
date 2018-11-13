@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import NavBar from "../../common/nav/NavBar";
-import { Button } from "mdbreact";
 import Welcome from "./component/Welcome";
 import Profile from "./component/Profile";
+import FooterPage from "../../common/footer/FooterPage";
 const appTokenKey = "appToken";
 
 export default class Home extends Component {
