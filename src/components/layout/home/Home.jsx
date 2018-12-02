@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import Welcome from "./component/Welcome";
 import Profile from "./component/Profile";
-import FooterPage from "../../common/footer/FooterPage";
-const appTokenKey = "appToken";
 
 export default class Home extends Component {
   constructor(props) {
@@ -20,7 +18,12 @@ export default class Home extends Component {
 
   render() {
     const { loggedIn } = this.state;
-    const display = loggedIn === true ? <Profile /> : <Welcome />;
+    const display =
+      loggedIn === true ? (
+        <Profile />
+      ) : (
+        <Welcome history={this.props.history} />
+      );
     return <React.Fragment>{display}</React.Fragment>;
   }
 }

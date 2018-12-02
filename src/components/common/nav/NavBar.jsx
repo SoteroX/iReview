@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { logout } from "../../../helpers/auth";
 import {
   Navbar,
@@ -31,6 +31,7 @@ class NavBar extends React.Component {
   handleSignOut = () => {
     logout().then(() => {
       localStorage.removeItem(appTokenKey);
+      localStorage.removeItem("data");
       this.props.history.push("/login");
       console.log("user signed out");
     });
@@ -75,12 +76,6 @@ class NavBar extends React.Component {
             </NavItem>
             <NavItem>
               <NavLink to="/movies">Movies</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to="/games">Games</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to="/profiles">Profiles</NavLink>
             </NavItem>
           </NavbarNav>
           <NavbarNav right>

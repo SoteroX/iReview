@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import { HashLoader } from "react-spinners";
+import axios from "axios";
+// Custom Components
 import ScrollField from "../../../common/scroll/ScrollField";
 import Card from "../../../common/card/Card";
-import { PacmanLoader } from "react-spinners";
-import axios from "axios";
 
 class Popular extends Component {
   constructor(props) {
@@ -46,11 +47,11 @@ class Popular extends Component {
           <ScrollField>{newest}</ScrollField>
         ) : (
           <div className="sweet-loading" style={{ marginLeft: "50%" }}>
-            <PacmanLoader
+            <HashLoader
               sizeUnit={"px"}
               size={40}
               margin="2px"
-              color={"#123abc"}
+              color={"#66d9ff"}
               loading={this.state.loading}
             />
           </div>

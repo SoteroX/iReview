@@ -1,22 +1,17 @@
 import React, { Component } from "react";
-import {
-  Container,
-  Card,
-  CardImage,
-  CardTitle,
-  CardBody,
-  CardText,
-  Button,
-  Col
-} from "mdbreact";
+import { Card, CardImage, CardTitle, CardBody, CardText, Col } from "mdbreact";
 import Rating from "react-rating";
 
 export default class ReviewCard extends Component {
   render() {
-    console.log("inside review carddata: ", this.props.data.rate);
     return (
       <Col
-        style={{ marginTop: "20px", wordBreak: "break-word" }}
+        style={{
+          marginTop: "20px",
+          wordBreak: "break-word",
+          minWidth: "367px",
+          marginBottom: "40px"
+        }}
         className="w-100 col-12 col-md-4"
       >
         <Card
@@ -29,7 +24,7 @@ export default class ReviewCard extends Component {
               className="view gradient-card-header"
               style={{
                 background:
-                  "linear-gradient(90deg, rgb(54, 185, 110) 4%, rgb(0, 212, 255) 50%)"
+                  "linear-gradient(90deg, rgb(10, 91, 97) 4%, rgb(0, 212, 255) 50%)"
               }}
             >
               <img
@@ -50,7 +45,7 @@ export default class ReviewCard extends Component {
           <CardBody
             style={{
               background:
-                "linear-gradient(90deg, rgb(54, 185, 110) 4%, rgb(0, 212, 255) 50%)"
+                "linear-gradient(90deg, rgb(10, 91, 97) 4%, rgb(0, 212, 255) 50%)"
             }}
           >
             <CardTitle style={{ textAlign: "center" }}>

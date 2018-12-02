@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Mask } from "mdbreact";
+import { View } from "mdbreact";
 class Card extends Component {
   constructor(props) {
     super(props);
@@ -11,17 +11,11 @@ class Card extends Component {
   handleClick = () => {
     this.props.history.push({
       pathname: `/movies/${this.props.data.id}`
-      // state: this.props.data
     });
   };
 
-  // componentDidMount() {
-  //   this.setState({ data: this.props.data });
-  // }
-
   render() {
-    // console.log("state is: ", this.state.data);
-    const { title, poster_path, backdrop_path } = this.props.data;
+    const { title, backdrop_path } = this.props.data;
     let poster_img = "";
     if (backdrop_path !== null) {
       poster_img = "https://image.tmdb.org/t/p/w500" + backdrop_path;
@@ -33,23 +27,17 @@ class Card extends Component {
     return (
       <View
         overlay="light-strong"
-        className="overlay carousel-tile"
+        className="overlay carousel-tile card-hover"
         onClick={this.handleClick}
       >
-        {/* {console.log("inside card, data is: ", this.props.data)} */}
         <div style={{ position: "absolute", color: "white" }}>
           <img src={poster_img} className="img-fluid" alt="" />
           <div style={{ position: "absolute", left: 0, top: 0 }}>
-            {/* {console.log("card title is:", title)} */}
             <p style={{ backgroundColor: "black", padding: "4px 4px 2px 2px" }}>
               {title}
             </p>
           </div>
         </div>
-
-        <Mask className="flex-center rgba-light-strong">
-          <p className="white-text">Strong overlay</p>
-        </Mask>
       </View>
     );
   }

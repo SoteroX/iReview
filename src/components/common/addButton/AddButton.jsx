@@ -8,7 +8,6 @@ import {
   Fa,
   Modal,
   ModalBody,
-  ModalHeader,
   ModalFooter
 } from "mdbreact";
 import { firestoreConnect } from "react-redux-firebase";
@@ -87,7 +86,7 @@ class AddButton extends Component {
         <Button
           style={{
             background:
-              "linear-gradient(90deg, rgb(54, 185, 110) 4%, rgb(0, 212, 255) 50%)",
+              "linear-gradient(90deg, rgb(10, 91, 97) 4%, rgb(0, 212, 255) 50%)",
             position: "fixed",
             bottom: "20px",
             right: "20px"
@@ -111,7 +110,7 @@ class AddButton extends Component {
                   className="modal-header  white-text"
                   style={{
                     background:
-                      "linear-gradient(90deg, rgb(54, 185, 110) 4%, rgb(0, 212, 255) 50%)"
+                      "linear-gradient(90deg, rgb(10, 91, 97) 4%, rgb(0, 212, 255) 50%)"
                   }}
                 >
                   <h4 className="title">
@@ -129,6 +128,7 @@ class AddButton extends Component {
                     emptySymbol="fa fa-star-o fa-2x"
                     fullSymbol="fa fa-star fa-2x"
                     onChange={this.handleRateChange}
+                    style={{ display: "flex !important" }}
                   />
                   <Input
                     size="sm"
@@ -161,7 +161,7 @@ class AddButton extends Component {
                   <Button
                     style={{
                       background:
-                        "linear-gradient(90deg, rgb(54, 185, 110) 4%, rgb(0, 212, 255) 50%)"
+                        "linear-gradient(90deg, rgb(10, 91, 97) 4%, rgb(0, 212, 255) 50%)"
                     }}
                     onClick={this.handleOnSubmit}
                     href={"/movies/" + this.props.movieID}

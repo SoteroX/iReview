@@ -3,6 +3,7 @@ import { loginWithGoogle } from "../../../helpers/auth";
 import { firebaseAuth } from "../../../config/firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import firebase from "firebase";
+import NavBar from "../../common/nav/NavBar";
 
 const firebaseAuthKey = "firebaseAuthInProgress";
 const appTokenKey = "appToken";
@@ -57,12 +58,22 @@ export default class Login extends Component {
       return <div>splashscreen</div>;
     }
     return (
-      <div style={{ height: "79vh" }}>
-        <p>Please sign-in:</p>
-        <StyledFirebaseAuth
-          uiConfig={uiConfig}
-          firebaseAuth={firebase.auth()}
-        />
+      <div style={{ height: "100%" }}>
+        <NavBar />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            height: "80%",
+            justifyContent: "center"
+          }}
+        >
+          <p style={{ textAlign: "center" }}>Please sign-in:</p>
+          <StyledFirebaseAuth
+            uiConfig={uiConfig}
+            firebaseAuth={firebase.auth()}
+          />
+        </div>
       </div>
     );
   }

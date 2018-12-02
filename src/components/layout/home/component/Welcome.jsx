@@ -7,6 +7,7 @@ export default class Welcome extends Component {
     this.props.history.push("/login");
   };
   render() {
+    console.log("history: ", this.props.history);
     return (
       <section style={{ overflowY: "hidden" }} className="welcome-section">
         <NavBar />
@@ -14,7 +15,7 @@ export default class Welcome extends Component {
           <h1>Welcome to iReviews</h1>
           <p>
             iReviews is a place where the average person can come together to
-            rate and review both movies an games .
+            rate and review movies .
           </p>
           <div>
             <h4>Login now it's free.</h4>
